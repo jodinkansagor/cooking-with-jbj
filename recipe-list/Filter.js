@@ -64,9 +64,10 @@ class Filter extends Component {
                     <option value="Dessert">Dessert</option>
                     <option value="Other">Other</option>
                 </select></label>
-                
-                <button>Get My Recipes</button>
-                <button><a href = "/">Reset Your Search</a></button>
+                <section class = 'buttons'>
+                  <button>Get My Recipes</button>
+                  <button><a href = "/">Reset Your Search</a></button>
+                </section>
             </form>
     `;
   }

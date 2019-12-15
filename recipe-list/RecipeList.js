@@ -15,7 +15,7 @@ class RecipeList extends Component {
 
   renderHTML() {
     return `
-        <ul class="recipes"></ul>
+        <ul class="recipes" id="recipes"></ul>
         `;
   }
 

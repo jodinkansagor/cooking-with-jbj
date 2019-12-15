@@ -45,6 +45,7 @@ class RecipeListApp extends Component {
     return `
       <div>
         <main></main>
+      </div>
       `;
   }
 }
