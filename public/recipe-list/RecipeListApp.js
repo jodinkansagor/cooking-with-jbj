@@ -26,6 +26,7 @@ class RecipeListApp extends Component {
     try {
       getRecipes().then(recipes => {
         list.update({ recipes });
+        console.log(recipes);
       });
     }
 

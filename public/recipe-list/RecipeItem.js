@@ -9,9 +9,10 @@ class RecipeItem extends Component {
         <a href="recipe-detail.html?id=${recipe.id}">
           <div class = "info-container">
             <h2>${recipe.name}</h2>
+            <h3>${recipe.type}</h3>
           </div>
           <div class = "image-container">
-            <img src="https://placebear.com/500/300" alt = "This is a bear">
+            <img src="${recipe.imageURL}" alt = "This is a bear">
           </div>
         </a>
       </li>
