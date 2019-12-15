@@ -7,3 +7,10 @@ export async function getRecipes() {
   const data = await response.json();
   return data;
 }
+
+export async function getRecipeById(id){
+  const url = `${URL}/${id}`;
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
+}

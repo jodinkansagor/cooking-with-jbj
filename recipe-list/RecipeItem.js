@@ -4,9 +4,9 @@ class RecipeItem extends Component {
 
   renderHTML() {
     const recipe = this.props.recipe;
-    return `
+    return /*html*/ `
       <li class = "recipe-item">
-        <a href="recipe-detail.html?id=${recipe.id}">
+        <a href="recipe-detail.html?id=${recipe._id}">
           <div class = "info-container">
             <h2>${recipe.name}</h2>
             <h3>${recipe.type}</h3>

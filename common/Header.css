@@ -1,0 +1,32 @@
+/* font-family: 'Homemade Apple', cursive;
+font-family: 'Charmonman', cursive; */
+
+
+.header-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 15px;
+}
+
+header img {
+  height: 200px;
+}
+
+h1 {
+  font-family: 'Charmonman', cursive;
+  font-size: 45px;
+color: #A0522D;
+  margin: 7px;
+  line-height: 1.4em;
+  display: inline;
+}
+
+img {
+  border-radius: 5px;
+}
+
+a {
+  text-decoration: none;
+}

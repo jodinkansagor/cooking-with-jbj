@@ -19,15 +19,16 @@ class RecipeListApp extends Component {
     const main = dom.querySelector('main');
     main.appendChild(list.renderDOM());
 
+    
+
     const footer = new Footer();
-    main.appendChild(footer.renderDOM());
+    dom.appendChild(footer.renderDOM());
 
 
     try {
       getRecipes().then(recipes => {
         list.update({ recipes });
-        console.log(recipes);
-      });
+       });
     }
 
     catch (err) {
@@ -45,7 +46,6 @@ class RecipeListApp extends Component {
     return `
       <div>
         <main></main>
-      </div>
       `;
   }
 }
