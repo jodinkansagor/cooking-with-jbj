@@ -12,14 +12,14 @@ class RecipeListApp extends Component {
     });
     dom.prepend(header.renderDOM());
 
-    const loading = new Loading({ loading: true });
-    dom.appendChild(loading.renderDOM());
+
 
     const list = new RecipeList({ recipes: [] });
     const main = dom.querySelector('main');
     main.appendChild(list.renderDOM());
 
-    
+    const loading = new Loading({ loading: true });
+    dom.appendChild(loading.renderDOM());
 
     const footer = new Footer();
     dom.appendChild(footer.renderDOM());
