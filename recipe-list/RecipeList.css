@@ -58,3 +58,15 @@ a {
   font-style: italic;
 }
 
+/* .header-contents {grid-area: header;}
+.recipes {grid-area: list;}
+.footer {grid-area: footer;}
+
+@media (min-width: 450px) {
+  main {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: 
+  }
+} */
+
