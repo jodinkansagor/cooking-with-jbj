@@ -15,7 +15,9 @@ class RecipeList extends Component {
 
   renderHTML() {
     return `
+      <section class="recipe-list" id="recipe-list>
         <ul class="recipes" id="recipes"></ul>
+      </section>
         `;
   }
 

@@ -64,25 +64,25 @@ a {
 
 .header-contents {grid-area: header;}
 .search-form {grid-area: filter;}
-.recipes {grid-area: list;}
+.recipe-list {grid-area: list;}
 .footer {grid-area: footer;}
 
-@media (min-width: 450px) {
+@media (min-width: 800px) {
   main {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: 1fr;
-    grid-template-areas: "header"
-    "filter"
-    "list"
-    "footer";
+    grid-template-columns: 350px 3fr;
+    grid-template-areas: "filter list list list"
+    "footer footer footer footer";
   }
 
-  #recipes {
+  #recipe-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
     grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, 375px);
   }
+
+
 
 }
 
