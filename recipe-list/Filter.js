@@ -3,14 +3,14 @@ import Component from '../Component.js';
 class Filter extends Component {
 
   onRender(form) {
-    // const ingredientsSearchInput = form.querySelector('input[name=search]');
+    const ingredientsSearchInput = form.querySelector('input[name=search]');
     const typeOptions = form.querySelectorAll('select[name=type]');
 
     function updateControls() {
       const queryString = window.location.hash.slice(1);
       const searchParams = new URLSearchParams(queryString);
 
-      // ingredientsSearchInput.value = searchParams.get('ingredient') || '';
+      ingredientsSearchInput.value = searchParams.get('ingredient') || '';
       const type = searchParams.get('type');
       if (type) {
         typeOptions.forEach(typeOption => {
@@ -30,11 +30,10 @@ class Filter extends Component {
       const queryString = window.location.hash.slice(1);
       const searchParams = new URLSearchParams(queryString);
 
-      // searchParams.set('ingredients.name', formData.get('search'));
+      searchParams.set('ingredients', formData.get('search'));
       searchParams.set('type', formData.get('type'));
 
       window.location.hash = searchParams.toString();
-      console.log(window.location.hash);
     });
   }
 
@@ -42,9 +41,9 @@ class Filter extends Component {
   renderHTML() {
     return /*html*/ `
       <form class = "search-form">
-                <!-- <label>Search: <input type="text" name ="search"></label> -->
-                <label>Choose a type of cuisine:<select class="type" name = "type">
-                    <option value="">All Types!</option>
+                <label>Search: <input type="text" name ="search"></label>
+                <label>Choose a category of cuisine:<select class="type" name = "type">
+                    <option value="">All Categories!</option>
                     <option value="Italian">Italian</option>
                     <option value="Mexican">Mexican</option>
                     <option value="American">American</option>

@@ -5,17 +5,22 @@ class RecipeDetail extends Component {
   renderHTML() {
 
     const recipe = this.props.recipe;
-    let recipeDirections = recipe.directions.join('\n');
-    let ingredientLine = recipe.ingredients.map(ingredient => {
-      return `${ingredient.name}: ${ingredient.amount} ${ingredient.measurements}`;
-    });
-    let attemptLine = recipe.attempts.map(attempt => {
-      return `${attempt.month}-${attempt.day}-${attempt.year}: ${attempt.notes} Rating: ${attempt.rating}`;
-    });
+    let recipeDirections = recipe.directions.reduce((acc, curr) => {
+      return acc += `<li>${curr}</li>`;
+    }, '');
+    let ingredientLine = recipe.ingredients.reduce((acc, curr) => {
+      return acc += `<li>${curr.name}: ${curr.amount} ${curr.measurements}</li>`;
+    }, '');
 
+    let attemptLine = recipe.attempts.reduce((acc, curr) => {
+      return acc += `<li><u>${curr.month}-${curr.day}-${curr.year}:</u> ${curr.notes} Rating: ${curr.rating}</li>`;
+    }, '');
+
+    
     console.log(ingredientLine);
     console.log(recipe.directions);
-    console.log(attemptLine);
+    
+    
 
 
     return /*html*/ `
@@ -24,17 +29,18 @@ class RecipeDetail extends Component {
         <img src = "${recipe.imageURL}" />
         <section class = "ingredients">
           <h4>Ingredients:</h4>
-          <p>${ingredientLine}</p>
+          <li>${ingredientLine}</li>
         </section>
         <section class = "directions">
           <h4>Directions:</h4>
-          <p>${recipeDirections}</p>
+          <ol>${recipeDirections}<//ol>
         </section>
         <section class = "attempts">
           <h4>Attempts:</h4>
-          <p>${attemptLine}</p>
+          <ol>${attemptLine}</ol>
         </section>
-        <h5>${recipe.type}</h5>
+        <h5>Recipe Category: ${recipe.type}</h5>
+    </div>
     `;
   }
 }

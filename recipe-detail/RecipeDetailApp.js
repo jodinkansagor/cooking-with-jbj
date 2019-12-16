@@ -2,6 +2,7 @@ import Component from '../Component.js';
 import Header from '../common/Header.js';
 import Loading from '../common/Loading.js';
 import RecipeDetail from './RecipeDetail.js';
+import Footer from '../common/Footer.js';
 import { getRecipeById } from '../services/recipe-api.js';
 
 class RecipeDetailApp extends Component {
@@ -35,6 +36,9 @@ class RecipeDetailApp extends Component {
     finally {
       loading.update({ loading: false });
     }
+
+    const footer = new Footer();
+    main.appendChild(footer.renderDOM());
   }
 
   renderHTML() {
