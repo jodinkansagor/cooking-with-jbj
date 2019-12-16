@@ -62,7 +62,20 @@ a {
 
 /*media queries*/
 
-.header-contents {grid-area: header;}
+@media (min-width: 450px) {
+
+  .recipe-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  li {
+    margin: 10px;
+  }
+}
+
+/* .header-contents {grid-area: header;}
 .search-form {grid-area: filter;}
 .recipe-list {grid-area: list;}
 .footer {grid-area: footer;}
@@ -84,5 +97,5 @@ a {
 
 
 
-}
+} */
 
