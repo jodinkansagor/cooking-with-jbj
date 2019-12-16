@@ -16,13 +16,6 @@ class RecipeDetail extends Component {
       return acc += `<li><u>${curr.month}-${curr.day}-${curr.year}:</u> ${curr.notes}<br> Rating: ${curr.rating}</li>`;
     }, '');
 
-    
-    console.log(ingredientLine);
-    console.log(recipe.directions);
-    
-    
-
-
     return /*html*/ `
       <div class = "recipe-detail">
         <h1>${recipe.name}</h2>

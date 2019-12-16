@@ -18,7 +18,7 @@ class RecipeDetailApp extends Component {
     const searchParams = new URLSearchParams(window.location.search);
     const id = searchParams.get('id');
 
-    if (!id) {
+    if(!id) {
       window.location = '/';
       return;
     }

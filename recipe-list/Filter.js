@@ -12,7 +12,7 @@ class Filter extends Component {
 
       ingredientsSearchInput.value = searchParams.get('ingredient') || '';
       const type = searchParams.get('type');
-      if (type) {
+      if(type) {
         typeOptions.forEach(typeOption => {
           typeOption.selected === typeOption.value;
         });
