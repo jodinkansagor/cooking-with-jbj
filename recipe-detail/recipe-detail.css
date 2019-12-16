@@ -1,0 +1,54 @@
+main {
+  font-family: 'Delius', cursive;
+  color: #8B4513
+}
+
+main img {
+  width: 375px;
+  margin-bottom: 10px;
+  border: 1px solid #8B4513
+}
+
+main h1 {
+  font-size: 30px;
+ 
+}
+
+.recipe-detail {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h4 {
+  margin: 7px;
+}
+
+p {
+  margin: 5px;
+}
+
+.ingredients, .directions, .attempts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffd7;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid #8B4513;
+  border-radius: 20px;
+  text-decoration: none;
+  list-style: none;
+}
+
+ol {
+  padding-left: 20px;
+
+  padding-right: 20px;
+  margin: 5px;
+}
+
+@media (min-width: 800px) {
+   
+}
