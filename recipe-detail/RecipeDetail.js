@@ -13,7 +13,7 @@ class RecipeDetail extends Component {
     }, '');
 
     let attemptLine = recipe.attempts.reduce((acc, curr) => {
-      return acc += `<li><u>${curr.month}-${curr.day}-${curr.year}:</u> ${curr.notes} Rating: ${curr.rating}</li>`;
+      return acc += `<li><u>${curr.month}-${curr.day}-${curr.year}:</u> ${curr.notes}<br> Rating: ${curr.rating}</li>`;
     }, '');
 
     
